@@ -1,0 +1,386 @@
+view: orders__refunds__transactions {
+  sql_table_name: shopify.orders__refunds__transactions ;;
+
+  dimension: _orders__refunds__transactions_id {
+    primary_key: yes
+    type: number
+    sql: ${TABLE}._orders__refunds__transactions_id ;;
+  }
+
+  dimension: _created_by {
+    type: string
+    sql: ${TABLE}._created_by ;;
+  }
+
+  dimension_group: _created_date {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}._created_date_time ;;
+  }
+
+  dimension: _last_modified_job_id {
+    type: number
+    sql: ${TABLE}._last_modified_job_id ;;
+  }
+
+  dimension: _mt_account_id {
+    type: number
+    sql: ${TABLE}._mt_account_id ;;
+  }
+
+  dimension: _orders__refunds_id {
+    type: number
+    sql: ${TABLE}._orders__refunds_id ;;
+  }
+
+  dimension: _orders_hashkey {
+    type: string
+    sql: ${TABLE}._orders_hashkey ;;
+  }
+
+  dimension: _orders_id {
+    type: number
+    sql: ${TABLE}._orders_id ;;
+  }
+
+  dimension: _source_key_id {
+    type: number
+    sql: ${TABLE}._source_key_id ;;
+  }
+
+  dimension: _updated_by {
+    type: string
+    sql: ${TABLE}._updated_by ;;
+  }
+
+  dimension_group: _updated_date {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}._updated_date_time ;;
+  }
+
+  dimension: amount {
+    type: number
+    sql: ${TABLE}.amount ;;
+  }
+
+  dimension: authorization {
+    type: string
+    sql: ${TABLE}."authorization" ;;
+  }
+
+  dimension_group: created {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.created_at ;;
+  }
+
+  dimension: currency {
+    type: string
+    sql: ${TABLE}.currency ;;
+  }
+
+  dimension: error_code {
+    type: string
+    sql: ${TABLE}.error_code ;;
+  }
+
+  dimension: gateway {
+    type: string
+    sql: ${TABLE}.gateway ;;
+  }
+
+  dimension: id {
+    type: number
+    sql: ${TABLE}.id ;;
+  }
+
+  dimension: kind {
+    type: string
+    sql: ${TABLE}.kind ;;
+  }
+
+  dimension: message {
+    type: string
+    sql: ${TABLE}.message ;;
+  }
+
+  dimension: order_id {
+    type: number
+    sql: ${TABLE}.order_id ;;
+  }
+
+  dimension: parent_id {
+    type: number
+    sql: ${TABLE}.parent_id ;;
+  }
+
+  dimension: receipt__account_number {
+    type: string
+    sql: ${TABLE}.receipt__account_number ;;
+  }
+
+  dimension: receipt__ack {
+    type: string
+    sql: ${TABLE}.receipt__ack ;;
+  }
+
+  dimension: receipt__action {
+    type: string
+    sql: ${TABLE}.receipt__action ;;
+  }
+
+  dimension: receipt__authorization_code {
+    type: string
+    sql: ${TABLE}.receipt__authorization_code ;;
+  }
+
+  dimension: receipt__authorization_id {
+    type: string
+    sql: ${TABLE}.receipt__authorization_id ;;
+  }
+
+  dimension: receipt__authorizationid {
+    type: string
+    sql: ${TABLE}.receipt__authorizationid ;;
+  }
+
+  dimension: receipt__avs_result_code {
+    type: string
+    sql: ${TABLE}.receipt__avs_result_code ;;
+  }
+
+  dimension: receipt__build {
+    type: string
+    sql: ${TABLE}.receipt__build ;;
+  }
+
+  dimension: receipt__correlation_id {
+    type: string
+    sql: ${TABLE}.receipt__correlation_id ;;
+  }
+
+  dimension: receipt__correlationid {
+    type: string
+    sql: ${TABLE}.receipt__correlationid ;;
+  }
+
+  dimension: receipt__error_code {
+    type: string
+    sql: ${TABLE}.receipt__error_code ;;
+  }
+
+  dimension: receipt__error_codes {
+    type: string
+    sql: ${TABLE}.receipt__error_codes ;;
+  }
+
+  dimension: receipt__errors__errorcode {
+    type: string
+    sql: ${TABLE}.receipt__errors__errorcode ;;
+  }
+
+  dimension: receipt__errors__longmessage {
+    type: string
+    sql: ${TABLE}.receipt__errors__longmessage ;;
+  }
+
+  dimension: receipt__errors__severitycode {
+    type: string
+    sql: ${TABLE}.receipt__errors__severitycode ;;
+  }
+
+  dimension: receipt__errors__shortmessage {
+    type: string
+    sql: ${TABLE}.receipt__errors__shortmessage ;;
+  }
+
+  dimension: receipt__exception {
+    type: string
+    sql: ${TABLE}.receipt__exception ;;
+  }
+
+  dimension: receipt__fee_refund_amount {
+    type: string
+    sql: ${TABLE}.receipt__fee_refund_amount ;;
+  }
+
+  dimension: receipt__fee_refund_amount_currency_id {
+    type: string
+    sql: ${TABLE}.receipt__fee_refund_amount_currency_id ;;
+  }
+
+  dimension: receipt__feerefundamount {
+    type: string
+    sql: ${TABLE}.receipt__feerefundamount ;;
+  }
+
+  dimension: receipt__gift_card_id {
+    type: number
+    sql: ${TABLE}.receipt__gift_card_id ;;
+  }
+
+  dimension: receipt__gift_card_last_characters {
+    type: string
+    sql: ${TABLE}.receipt__gift_card_last_characters ;;
+  }
+
+  dimension: receipt__gross_refund_amount {
+    type: string
+    sql: ${TABLE}.receipt__gross_refund_amount ;;
+  }
+
+  dimension: receipt__gross_refund_amount_currency_id {
+    type: string
+    sql: ${TABLE}.receipt__gross_refund_amount_currency_id ;;
+  }
+
+  dimension: receipt__grossrefundamount {
+    type: string
+    sql: ${TABLE}.receipt__grossrefundamount ;;
+  }
+
+  dimension: receipt__message {
+    type: string
+    sql: ${TABLE}.receipt__message ;;
+  }
+
+  dimension: receipt__net_refund_amount {
+    type: string
+    sql: ${TABLE}.receipt__net_refund_amount ;;
+  }
+
+  dimension: receipt__net_refund_amount_currency_id {
+    type: string
+    sql: ${TABLE}.receipt__net_refund_amount_currency_id ;;
+  }
+
+  dimension: receipt__netrefundamount {
+    type: string
+    sql: ${TABLE}.receipt__netrefundamount ;;
+  }
+
+  dimension: receipt__pending_reason {
+    type: string
+    sql: ${TABLE}.receipt__pending_reason ;;
+  }
+
+  dimension: receipt__refund_status {
+    type: string
+    sql: ${TABLE}.receipt__refund_status ;;
+  }
+
+  dimension: receipt__refund_transaction_id {
+    type: string
+    sql: ${TABLE}.receipt__refund_transaction_id ;;
+  }
+
+  dimension: receipt__refundinfo__pendingreason {
+    type: string
+    sql: ${TABLE}.receipt__refundinfo__pendingreason ;;
+  }
+
+  dimension: receipt__refundinfo__refundstatus {
+    type: string
+    sql: ${TABLE}.receipt__refundinfo__refundstatus ;;
+  }
+
+  dimension: receipt__refundtransactionid {
+    type: string
+    sql: ${TABLE}.receipt__refundtransactionid ;;
+  }
+
+  dimension: receipt__response_code {
+    type: number
+    sql: ${TABLE}.receipt__response_code ;;
+  }
+
+  dimension: receipt__response_reason_code {
+    type: string
+    sql: ${TABLE}.receipt__response_reason_code ;;
+  }
+
+  dimension: receipt__response_reason_text {
+    type: string
+    sql: ${TABLE}.receipt__response_reason_text ;;
+  }
+
+  dimension: receipt__test_request {
+    type: string
+    sql: ${TABLE}.receipt__test_request ;;
+  }
+
+  dimension: receipt__timestamp {
+    type: string
+    sql: ${TABLE}.receipt__timestamp ;;
+  }
+
+  dimension: receipt__total_refunded_amount {
+    type: string
+    sql: ${TABLE}.receipt__total_refunded_amount ;;
+  }
+
+  dimension: receipt__total_refunded_amount_currency_id {
+    type: string
+    sql: ${TABLE}.receipt__total_refunded_amount_currency_id ;;
+  }
+
+  dimension: receipt__totalrefundedamount {
+    type: string
+    sql: ${TABLE}.receipt__totalrefundedamount ;;
+  }
+
+  dimension: receipt__transaction_id {
+    type: string
+    sql: ${TABLE}.receipt__transaction_id ;;
+  }
+
+  dimension: receipt__version {
+    type: string
+    sql: ${TABLE}.receipt__version ;;
+  }
+
+  dimension: source_name {
+    type: string
+    sql: ${TABLE}.source_name ;;
+  }
+
+  dimension: status {
+    type: string
+    sql: ${TABLE}.status ;;
+  }
+
+  dimension: test {
+    type: yesno
+    sql: ${TABLE}.test ;;
+  }
+
+  measure: count {
+    type: count
+    drill_fields: [_orders__refunds__transactions_id, source_name]
+  }
+}
